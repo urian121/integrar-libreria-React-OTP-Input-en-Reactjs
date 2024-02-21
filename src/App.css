@@ -48,8 +48,6 @@ span {
   display: block;
   width: 55%;
   margin: 2rem auto;
-  background: #eaeaea;
-  color: #b9b7b5;
   font-size: 0.8rem;
   padding: 0.5rem;
   font-weight: 100;
@@ -91,4 +89,7 @@ span {
 
 .custom_navbar {
   background-color: #ffe600 !important;
+}
+.vh-90 {
+  height: 90vh !important;
 }

@@ -1,22 +1,17 @@
+import { useState } from "react";
 import "./App.css";
-import logo from "./imgs/mercado-libre-logo.png";
+
+import OtpInput from "react-otp-input";
+import NavBar from "./components/NavBar";
 
 function App() {
+  const [otp, setOtp] = useState("");
+
   return (
     <>
-      <nav className="navbar bg-body-tertiary custom_navbar">
-        <div className="container">
-          <a className="navbar-brand" href="#">
-            <img
-              src={logo}
-              alt="Mercado Libre"
-              className="logo"
-              style={{ width: "150px" }}
-            />
-          </a>
-        </div>
-      </nav>
-      <div className="container d-flex align-items-center justify-content-center vh-100">
+      <NavBar />
+
+      <div className="container d-flex align-items-center justify-content-center vh-90">
         <div className="row">
           <div className="col-lg-12">
             <article>
@@ -30,13 +25,15 @@ function App() {
                   de entrada para confirmar el código.
                 </p>
               </section>
-              <form className="d-flex justify-content-center">
-                <input type="text" name="" autoFocus />
-                <input type="text" name="" />
-                <input type="text" name="" />
-                <input type="text" name="" />
-                <input type="text" name="" />
-                <input type="text" name="" />
+
+              <form>
+                <OtpInput
+                  value={otp}
+                  onChange={setOtp}
+                  numInputs={6}
+                  renderSeparator={<span>&nbsp;</span>}
+                  renderInput={(props) => <input {...props} />}
+                />
               </form>
               <button className="btn btn-primary d-block mx-auto">
                 Verificar el código
@@ -48,5 +45,4 @@ function App() {
     </>
   );
 }
-
 export default App;
