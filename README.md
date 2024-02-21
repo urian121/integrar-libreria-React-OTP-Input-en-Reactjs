@@ -1,6 +1,6 @@
 # Guía Completa para Integrar React-OTP-Input en Tus Proyectos de React
 
-#####
+##### La Guía Completa para Integrar React-OTP-Input ofrece una solución detallada y práctica para implementar la entrada de códigos OTP en proyectos de React. Desde su instalación hasta su integración.
 
 ##### Instalar la librería react-otp-input
 
